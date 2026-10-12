@@ -1,0 +1,8 @@
+{
+	"extends": "./node_modules/newspack-scripts/config/tsconfig.json",
+	"compilerOptions": {
+		"types": [ "node", "jest" ]
+	},
+	"include": [ "src/**/*", "tests/e2e/**/*", "playwright.config.ts" ],
+	"exclude": [ "node_modules", "build", "vendor", "release" ]
+}

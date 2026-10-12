@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<phpunit
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+	bootstrap="tests/bootstrap.php"
+	backupGlobals="false"
+	colors="true"
+	convertErrorsToExceptions="true"
+	convertNoticesToExceptions="true"
+	convertWarningsToExceptions="true"
+	convertDeprecationsToExceptions="true"
+	>
+	<testsuites>
+		<testsuite name="newspack-live">
+			<directory prefix="class-test-" suffix=".php">./tests/unit-tests/</directory>
+		</testsuite>
+	</testsuites>
+</phpunit>

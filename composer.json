@@ -1,0 +1,39 @@
+{
+	"name": "automattic/newspack-live",
+	"description": "Live coverage of developing stories for Newspack sites.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {
+		"automattic/vipwpcs": "^3.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"wp-phpunit/wp-phpunit": "7.1.*",
+		"roots/wordpress-no-content": "7.1.2",
+		"yoast/phpunit-polyfills": "^4.0",
+		"phpunit/phpunit": "^9.6"
+	},
+	"autoload": {
+		"classmap": [
+			"includes/"
+		]
+	},
+	"config": {
+		"autoloader-suffix": "NewspackLive",
+		"platform": {
+			"php": "8.2.29"
+		},
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"roots/wordpress-core-installer": false
+		},
+		"sort-packages": true
+	},
+	"scripts": {
+		"lint": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+		"lint:fix": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcbf",
+		"test": "@php ./vendor/phpunit/phpunit/phpunit"
+	}
+}

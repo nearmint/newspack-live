@@ -1,0 +1,5 @@
+{
+	"*.php": "bin/php.local.sh ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+	"{src/**/*.{js,jsx,ts,tsx},tests/e2e/**/*.ts,bin/*.mjs,*.config.{js,ts}}": "wp-scripts lint-js",
+	"src/**/*.scss": "wp-scripts lint-style --customSyntax postcss-scss --max-warnings=0"
+}

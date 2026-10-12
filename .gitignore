@@ -1,0 +1,28 @@
+# Dependencies and build output
+node_modules/
+vendor/
+build/
+release/
+
+# Machine-specific wrappers and credentials
+bin/wp.local.sh
+bin/php.local.sh
+bin/composer.phar
+.env.e2e
+tests/wp-tests-config.php
+
+# Test artifacts
+tests/e2e/.auth/
+test-results/
+playwright-report/
+.phpunit.result.cache
+.phpunit.cache/
+
+# Legacy zip location (the release zip lives in release/)
+newspack-live.zip
+
+.DS_Store
+*.log
+
+# Release screenshots (bin/screenshots.mjs)
+artifacts/

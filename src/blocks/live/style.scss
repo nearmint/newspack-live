@@ -1,0 +1,851 @@
+/**
+ * Live page styles. Theme tokens first, generic fallbacks second.
+ * Spacing in em, no fixed font sizes except the badges.
+ */
+
+$nl-tablet: 782px;
+$nl-desktop: 1024px;
+
+// Some themes (Newspack) make the main element a flex container: the block must fill it.
+.wp-block-newspack-live-live {
+	flex: 1 1 100%;
+	min-width: 0;
+	width: 100%;
+}
+
+.newspack-live {
+	--nl-accent: var(--newspack-theme-color-primary, var(--wp--preset--color--accent, #1d4ed8));
+	--nl-text: var(--newspack-theme-color-text-main, var(--wp--preset--color--contrast, currentcolor));
+	--nl-muted: var(--newspack-theme-color-text-light, var(--wp--preset--color--contrast-3, #5f6368));
+	--nl-border: var(--newspack-theme-color-border, var(--wp--preset--color--base-3, #dcdcde));
+	--nl-bg: var(--newspack-theme-color-bg-body, var(--wp--preset--color--base, #fff));
+	--nl-surface: color-mix(in srgb, var(--nl-text) 5%, var(--nl-bg));
+	--nl-live: #c8102e;
+	// The Context card's start border, shared with Key point entries: one definition.
+	--nl-accent-border: 4px solid var(--nl-accent);
+	// Success color (copy feedback): the theme's when it has one, else the plugin token (≥ 3:1).
+	--newspack-live-success: #007017;
+	--nl-success: var(--wp--preset--color--success, var(--newspack-live-success));
+	--nl-font-heading: var(--newspack-theme-font-heading, inherit);
+	--nl-font-body: var(--newspack-theme-font-body, inherit);
+
+	box-sizing: border-box;
+	margin-inline: auto;
+	max-width: var(--wp--style--global--wide-size, 1200px);
+	padding-block: 2em;
+	position: relative;
+	// The page takes the light surface so the white cards stand out. A border-image outset
+	// paints it across the viewport, beyond the column, without scrolling or clipping anything.
+	background: var(--nl-surface);
+	border-image: linear-gradient(var(--nl-surface), var(--nl-surface)) fill 0 / 0 / 0 100vmax;
+	width: 100%;
+	color: var(--nl-text);
+	font-family: var(--nl-font-body);
+	overflow-wrap: break-word;
+	// The view module compensates scrolling itself; native anchoring would do it twice.
+	overflow-anchor: none;
+
+	*,
+	*::before,
+	*::after {
+		box-sizing: inherit;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		font-family: var(--nl-font-heading);
+	}
+
+	a:focus-visible,
+	button:focus-visible,
+	input:focus-visible,
+	textarea:focus-visible,
+	summary:focus-visible {
+		outline: 2px solid var(--nl-accent);
+		outline-offset: 2px;
+	}
+
+	button {
+		cursor: pointer;
+		font: inherit;
+	}
+
+	[hidden] {
+		display: none !important; // Themes style buttons and sections with display rules that would beat the attribute.
+	}
+}
+
+.newspack-live__sr-only {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important; // Must win over any theme positioning.
+	width: 1px;
+	word-wrap: normal !important; // Must win over theme word wrapping.
+}
+
+.newspack-live__skip {
+	position: absolute;
+	inset-inline-start: -9999em;
+
+	&:focus {
+		background: var(--nl-bg);
+		inset-block-start: 0;
+		inset-inline-start: 0;
+		padding: 0.5em 1em;
+		z-index: 10;
+	}
+}
+
+/* Header */
+
+.newspack-live__header {
+	margin-block-end: 1.5em;
+}
+
+.newspack-live__status {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em 1em;
+	margin-block-end: 0.75em;
+}
+
+.newspack-live__updated {
+	color: var(--nl-muted);
+	font-size: 0.875em;
+}
+
+.newspack-live-badge {
+	align-items: center;
+	border-radius: 999px;
+	display: inline-flex;
+	font-size: 0.75em;
+	font-weight: 700;
+	gap: 0.4em;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	padding: 0.2em 0.75em;
+	text-transform: uppercase;
+	background: var(--nl-surface);
+	color: var(--nl-text);
+
+	// On the live page the surface is the page background: the badge stays white on it.
+	.newspack-live &--upcoming {
+		background: var(--nl-bg);
+	}
+
+	&--live {
+		background: var(--nl-live);
+		color: #fff;
+	}
+
+	&--ended {
+		background: #4b5563;
+		color: #fff;
+	}
+}
+
+.newspack-live-badge__dot {
+	animation: newspack-live-pulse 1.6s ease-in-out infinite;
+	background: currentcolor;
+	border-radius: 50%;
+	display: inline-block;
+	height: 0.6em;
+	width: 0.6em;
+}
+
+@keyframes newspack-live-pulse {
+
+	0%,
+	100% {
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0.35;
+	}
+}
+
+.newspack-live__title {
+	margin: 0 0 0.4em;
+}
+
+.newspack-live__standfirst {
+	color: var(--nl-muted);
+	font-size: 1.15em;
+	margin: 0 0 0.75em;
+}
+
+.newspack-live__meta {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em 1em;
+	margin-block-end: 1em;
+}
+
+.newspack-live__byline {
+	margin: 0;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.newspack-live__media {
+	margin: 0;
+
+	img {
+		display: block;
+		height: auto;
+		width: 100%;
+	}
+}
+
+.newspack-live__media-caption {
+	color: var(--nl-muted);
+	font-size: 0.875em;
+	margin-block-start: 0.5em;
+}
+
+.newspack-live__media-credit {
+	margin-inline-start: 0.5em;
+}
+
+/* Share */
+
+.newspack-live-share {
+	display: inline-block;
+	position: relative;
+
+	> summary {
+		cursor: pointer;
+		list-style: none;
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+	}
+}
+
+.newspack-live-share__button,
+.newspack-live-entry__share,
+.newspack-live__new-updates,
+.newspack-live__load-older,
+.newspack-live-share__copy {
+	align-items: center;
+	background: var(--nl-bg);
+	border: 1px solid var(--nl-border);
+	border-radius: 4px;
+	color: var(--nl-text);
+	display: inline-flex;
+	gap: 0.4em;
+	line-height: 1.2;
+	min-height: 24px;
+	min-width: 24px;
+	padding: 0.4em 0.8em;
+	text-decoration: none;
+}
+
+// Themes restyle button states (e.g. white text on hover/focus): keep our colors in every state.
+.newspack-live .newspack-live-share__button,
+.newspack-live .newspack-live-entry__share,
+.newspack-live .newspack-live__load-older,
+.newspack-live .newspack-live-share__copy {
+
+	&:hover,
+	&:focus,
+	&:active,
+	&[aria-expanded="true"] {
+		background: var(--nl-surface);
+		color: var(--nl-text);
+	}
+}
+
+// Closed disclosures keep no popover box (some engines lay it out anyway).
+.newspack-live-share:not([open]) > .newspack-live-share__popover {
+	display: none;
+}
+
+// Narrow screens: the open popover takes the full width in the flow (no overflow, even without
+// JavaScript).
+@media (max-width: 599px) {
+
+	.newspack-live-share[open] {
+		display: block;
+		flex-basis: 100%;
+		width: 100%;
+
+		// The entry button stays at the end edge, where the reader tapped it.
+		&.newspack-live-share--entry {
+			text-align: end;
+		}
+
+		> .newspack-live-share__popover {
+			box-shadow: none;
+			margin-block-start: 0.25em;
+			min-width: 0;
+			position: static;
+		}
+	}
+}
+
+// Opened near the end edge: the view module aligns the popover to the button's end instead.
+.newspack-live-share--flip > .newspack-live-share__popover {
+	inset-inline-end: 0;
+	inset-inline-start: auto;
+}
+
+// Open share disclosure.
+.newspack-live .newspack-live-share[open] > summary {
+	background: var(--nl-surface);
+	color: var(--nl-text);
+}
+
+// The new-updates pill keeps its accent colors in every state.
+.newspack-live .newspack-live__new-updates {
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: var(--nl-accent);
+		color: #fff;
+	}
+}
+
+// Standalone links get a 24 px target (WCAG 2.5.8).
+.newspack-live__back a,
+.newspack-live-ask__signin {
+	align-items: center;
+	display: inline-flex;
+	min-height: 24px;
+}
+
+.newspack-live-share__popover {
+	background: var(--nl-bg);
+	border: 1px solid var(--nl-border);
+	border-radius: 4px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+	display: flex;
+	flex-direction: column;
+	gap: 0.25em;
+	inset-inline-start: 0;
+	min-width: 12em;
+	padding: 0.5em;
+	position: absolute;
+	inset-block-start: calc(100% + 0.25em);
+	z-index: 20;
+
+	a,
+	button {
+		padding: 0.4em 0.5em;
+	}
+}
+
+// "Copy link" → "✓ Link copied" in place: both labels share one grid cell, so the item
+// keeps its size; the default label stays in the accessibility tree (stable accessible name).
+.newspack-live-share__copy {
+	display: inline-grid;
+	justify-items: start;
+
+	> span {
+		grid-area: 1 / 1;
+	}
+}
+
+.newspack-live-share__copy-done {
+	align-items: center;
+	display: inline-flex;
+	gap: 0.35em;
+	visibility: hidden;
+}
+
+.newspack-live-share__copy.is-copied,
+.newspack-live-share__copy.is-failed {
+
+	.newspack-live-share__copy-label {
+		opacity: 0;
+	}
+
+	.newspack-live-share__copy-done {
+		visibility: visible;
+	}
+}
+
+.newspack-live-share__check {
+	background: var(--nl-success);
+	flex: none;
+	height: 1em;
+	mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z'/%3E%3C/svg%3E") center / contain no-repeat;
+	width: 1em;
+
+	.is-failed & {
+		display: none;
+	}
+}
+
+@media (forced-colors: active) {
+
+	.newspack-live-share__check {
+		background: buttontext;
+		forced-color-adjust: none;
+	}
+}
+
+/* Layout */
+
+.newspack-live__layout {
+	display: flex;
+	flex-direction: column;
+	gap: 2em;
+}
+
+.newspack-live__main,
+.newspack-live__aside {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	min-width: 0;
+}
+
+@media (min-width: $nl-desktop) {
+
+	// Two columns only when there is an aside: otherwise the main column keeps the full width.
+	.newspack-live__layout--aside {
+		display: grid;
+		gap: 2em;
+		grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+		align-items: start;
+	}
+
+	// Sticky aside, below the admin bar and the theme's sticky header (height set by the
+	// view module); only while it fits in the viewport, else it scrolls with the page.
+	.newspack-live__aside--sticky {
+		position: sticky;
+		top: calc(var(--wp-admin--admin-bar--height, 0px) + var(--newspack-live-sticky-offset, 0px) + 16px);
+	}
+}
+
+.newspack-live__section-title {
+	font-size: 1.25em;
+	margin: 0 0 0.75em;
+}
+
+// Collapsible titles: the gap belongs to their panel, so a closed section keeps no space below it.
+.newspack-live__ask .newspack-live__section-title {
+	margin-block-end: 0;
+}
+
+/* Collapsible sections (Context card, ask form): the title is a disclosure button */
+
+// Themes style buttons (background, uppercase, padding): the title keeps the heading's look.
+.newspack-live .newspack-live__expander {
+	align-items: center;
+	background: none;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	color: inherit;
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	gap: 0.5em;
+	justify-content: space-between;
+	letter-spacing: inherit;
+	margin: 0;
+	min-height: 24px;
+	padding: 0;
+	text-align: start;
+	text-transform: none;
+	width: 100%;
+
+	&:hover,
+	&:focus,
+	&:active {
+		background: none;
+		color: inherit;
+	}
+}
+
+.newspack-live__chevron {
+	fill: none;
+	flex: 0 0 auto;
+	stroke: currentcolor;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	stroke-width: 2;
+	transition: transform 0.2s ease;
+
+	// Points to the end edge when closed (the RTL build flips the angle).
+	[aria-expanded="false"] > & {
+		transform: rotate(-90deg);
+	}
+}
+
+.newspack-live__context-content,
+.newspack-live__ask .newspack-live__panel {
+	margin-block-start: 0.75em;
+}
+
+/* Context card (the former Key points card) */
+
+.newspack-live__context {
+	background: var(--nl-bg);
+	border-inline-start: var(--nl-accent-border);
+	padding: 1.25em;
+
+	> :last-child,
+	.newspack-live__context-content > :last-child {
+		margin-block-end: 0;
+	}
+}
+
+.newspack-live__context-title {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+.newspack-live__context-content ul {
+	margin-block: 0;
+	padding-inline-start: 1.25em;
+}
+
+.newspack-live__context-content li + li {
+	margin-block-start: 0.4em;
+}
+
+/* Ask form */
+
+.newspack-live__ask {
+	background: var(--nl-bg);
+	border: 1px solid var(--nl-border);
+	padding: 1.25em;
+}
+
+.newspack-live-ask__field {
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+	margin: 0 0 1em;
+
+	textarea,
+	input {
+		width: 100%;
+	}
+}
+
+.newspack-live-ask__counter,
+.newspack-live-ask__privacy {
+	color: var(--nl-muted);
+	font-size: 0.875em;
+}
+
+.newspack-live-ask__hp {
+	height: 1px;
+	inset-inline-start: -9999em;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.newspack-live-ask__error:empty,
+.newspack-live-ask__success:empty {
+	display: none;
+}
+
+.newspack-live-ask__error {
+	color: #b3261e;
+}
+
+.newspack-live__closed {
+	margin: 0;
+}
+
+/* Feed */
+
+.newspack-live__feed {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.newspack-live__entries,
+.newspack-live__pinned {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+// A zero-height sticky bar: showing the button floats it over the feed without moving the content.
+// Sticky at the top of the feed, below the admin bar and the theme's sticky header.
+.newspack-live__new-updates-bar {
+	display: flex;
+	height: 0;
+	inset-block-start: calc(var(--wp-admin--admin-bar--height, 0px) + var(--newspack-live-sticky-offset, 0px) + 1em);
+	justify-content: center;
+	position: sticky;
+	z-index: 5;
+}
+
+.newspack-live__new-updates {
+	background: var(--nl-accent);
+	border-color: var(--nl-accent);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	height: max-content;
+}
+
+
+.newspack-live__empty,
+.newspack-live__start,
+.newspack-live__connection {
+	color: var(--nl-muted);
+	margin: 0;
+}
+
+// Kept in the accessibility tree while empty (a live region must exist before its text changes).
+.newspack-live__connection:empty {
+	clip-path: inset(50%);
+	height: 1px;
+	overflow: hidden;
+	position: absolute;
+	width: 1px;
+}
+
+.newspack-live__more {
+	display: flex;
+	justify-content: center;
+}
+
+/* Entries */
+
+.newspack-live-entry {
+	display: flex;
+	flex-direction: column;
+	gap: 0.35em;
+	// Inserted entries scroll into view below the admin bar and the theme's sticky header.
+	scroll-margin-block-start: calc(var(--wp-admin--admin-bar--height, 0px) + var(--newspack-live-sticky-offset, 0px) + 1em);
+
+	// The first inserted entry gets the focus: keep it visible after a mouse click too.
+	&[tabindex="-1"]:focus {
+		outline: 2px solid var(--nl-accent);
+		outline-offset: 2px;
+	}
+}
+
+// The time opens the card's top row.
+.newspack-live-entry__time {
+	color: var(--nl-muted);
+	font-size: var(--wp--preset--font-size--small, 0.875em);
+}
+
+// The entry label follows the time: bold text, uppercase through CSS only, no background.
+// Red labels use `--newspack-live-label-accent`, which themes can set (default: the live red, ≥ 4.5:1 on white).
+.newspack-live-entry__label {
+	color: var(--nl-text);
+	font-size: var(--wp--preset--font-size--small, 0.875em);
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.newspack-live-entry__label--accent {
+	color: var(--newspack-live-label-accent, var(--nl-live));
+}
+
+.newspack-live-entry__card {
+	background: var(--nl-bg);
+	border: 1px solid var(--nl-border);
+	padding: 1.25em;
+
+	.newspack-live-entry--new > & {
+		animation: newspack-live-highlight 2s ease-out;
+	}
+
+	> :last-child {
+		margin-block-end: 0;
+	}
+}
+
+// Key point entries take the Context card's border. Pinned entries have no border of their
+// own; a pinned style added later must come after this rule so it wins.
+.newspack-live-entry--key-point > .newspack-live-entry__card {
+	border-inline-start: var(--nl-accent-border);
+}
+
+@keyframes newspack-live-highlight {
+
+	from {
+		background: color-mix(in srgb, var(--nl-accent) 12%, var(--nl-bg));
+	}
+
+	to {
+		background: var(--nl-bg);
+	}
+}
+
+.newspack-live-entry__meta {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	margin-block-end: 0.75em;
+}
+
+.newspack-live-share--entry {
+	margin-inline-start: auto;
+
+	// Entry popovers open towards the start, so they stay on screen.
+	.newspack-live-share__popover {
+		inset-inline-end: 0;
+		inset-inline-start: auto;
+	}
+}
+
+.newspack-live-entry__share {
+	// An icon button: a 32 × 32 px target (WCAG 2.2: at least 24), named by visually hidden text.
+	border-color: transparent;
+	justify-content: center;
+	min-height: 32px;
+	min-width: 32px;
+	padding: 0.25em;
+}
+
+.newspack-live-share__svg {
+	flex: none;
+	height: 20px;
+	width: 20px;
+
+	circle {
+		fill: currentcolor;
+	}
+
+	path {
+		fill: none;
+		stroke: currentcolor;
+		stroke-linecap: round;
+		stroke-width: 1.75;
+	}
+}
+
+.newspack-live-entry__title {
+	font-size: 1.2em;
+	margin: 0 0 0.5em;
+}
+
+.newspack-live-entry__content {
+	> :first-child {
+		margin-block-start: 0;
+	}
+
+	> :last-child {
+		margin-block-end: 0;
+	}
+
+	img,
+	video,
+	iframe {
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.newspack-live-entry__author,
+.newspack-live-entry__updated {
+	color: var(--nl-muted);
+	font-size: 0.875em;
+	margin: 0.75em 0 0;
+}
+
+.newspack-live-entry__pinned {
+	border: 1px solid currentcolor;
+	border-radius: 999px;
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	line-height: 1.4;
+	padding: 0.15em 0.6em;
+	text-transform: uppercase;
+}
+
+/* Q&A */
+
+.newspack-live-qa {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75em;
+	margin-block-end: 1em;
+}
+
+.newspack-live-qa__question {
+	background: var(--nl-surface);
+	border-radius: 1em;
+	margin: 0;
+	padding: 0.75em 1em;
+}
+
+.newspack-live-qa__name {
+	color: var(--nl-muted);
+	font-size: 0.875em;
+	margin: 0.25em 0 0;
+	text-align: end;
+}
+
+@media (min-width: $nl-tablet) {
+
+	.newspack-live-qa__item {
+		margin-inline-start: 20%;
+	}
+}
+
+/* Aside */
+
+.newspack-live__related-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.newspack-live__related-link {
+	display: flex;
+	gap: 0.75em;
+	text-decoration: none;
+}
+
+.newspack-live__related-image {
+	flex: 0 0 4.5em;
+	height: 4.5em;
+	object-fit: cover;
+	width: 4.5em;
+}
+
+.newspack-live__related-title {
+	text-decoration: underline;
+}
+
+.newspack-live__ad:empty {
+	display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+	.newspack-live-badge__dot,
+	.newspack-live-entry--new > .newspack-live-entry__card {
+		animation: none;
+	}
+
+	.newspack-live__chevron {
+		transition: none;
+	}
+}
+

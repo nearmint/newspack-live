@@ -1,0 +1,110 @@
+/**
+ * Editor panel (admin colors).
+ */
+
+.newspack-live-panel__state {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	justify-content: space-between;
+}
+
+.newspack-live-panel__badge {
+	background: #f0f0f1;
+	border-radius: 999px;
+	color: #1e1e1e;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 1.6;
+	padding: 0 8px;
+
+	&--live {
+		background: #c8102e;
+		color: #fff;
+	}
+
+	&--ended {
+		background: #4b5563;
+		color: #fff;
+	}
+}
+
+.newspack-live-panel__start {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: flex-start;
+}
+
+.newspack-live-panel__picker {
+	padding: 8px;
+}
+
+.newspack-live-panel__hosts {
+	color: #757575;
+	margin: 0;
+}
+
+// "Context" box below the block editor: hidden until live coverage is on.
+.newspack-live-context--off {
+	display: none;
+}
+
+.newspack-live-context-editor__field {
+	background: #fff;
+	border: 1px solid #949494;
+	border-radius: 2px;
+
+	&:focus-within {
+		border-color: var(--wp-admin-theme-color, #3858e9);
+		box-shadow: 0 0 0 1px var(--wp-admin-theme-color, #3858e9);
+	}
+
+	// Each paragraph is shown as a bullet.
+	.block-editor-block-list__layout {
+		list-style: disc;
+		min-height: 72px;
+		padding-block: 8px;
+		padding-inline: 32px 12px;
+	}
+
+	.wp-block-paragraph {
+		display: list-item;
+		margin: 0 0 6px;
+	}
+}
+
+// Fixed toolbar at the top of the field: the selected bullet's tools, else a hint.
+.newspack-live-context-editor__toolbar {
+	align-items: center;
+	background: #f6f7f7;
+	border-block-end: 1px solid #dcdcde;
+	display: flex;
+	min-height: 48px;
+	padding: 0 4px;
+
+	.block-editor-block-contextual-toolbar,
+	.block-editor-block-toolbar {
+		border: 0;
+		box-shadow: none;
+	}
+
+	// The hint only shows while no bullet is selected (the toolbar renders nothing then).
+	.block-editor-block-toolbar ~ .newspack-live-context-editor__toolbar-hint,
+	.block-editor-block-contextual-toolbar ~ .newspack-live-context-editor__toolbar-hint {
+		display: none;
+	}
+}
+
+.newspack-live-context-editor__toolbar-hint {
+	color: #646970;
+	font-size: 12px;
+	padding: 0 8px;
+}
+
+.newspack-live-context-editor__help {
+	color: #757575;
+	font-size: 12px;
+	margin: 8px 0 0;
+}

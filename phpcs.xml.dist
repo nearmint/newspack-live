@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<ruleset name="Newspack Live">
+	<description>Coding standards for Newspack Live (mirrors the Newspack monorepo ruleset).</description>
+
+	<arg value="sp"/>
+	<arg name="colors"/>
+	<arg name="extensions" value="php"/>
+	<arg name="parallel" value="8"/>
+
+	<rule ref="WordPress-Extra"/>
+	<rule ref="WordPress-Docs"/>
+	<rule ref="WordPress-VIP-Go"/>
+
+	<rule ref="WordPress">
+		<exclude name="Universal.Arrays.DisallowShortArraySyntax.Found"/>
+		<exclude name="Universal.Operators.DisallowStandalonePostIncrementDecrement.PostIncrementFound"/>
+		<exclude name="Squiz.Functions.MultiLineFunctionDeclaration.SpaceAfterFunction"/>
+		<exclude name="WordPress.PHP.YodaConditions.NotYoda"/>
+		<exclude name="Generic.Formatting.MultipleStatementAlignment.NotSameWarning"/>
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.FoundAfterLastUsed"/>
+		<exclude name="Universal.NamingConventions.NoReservedKeywordParameterNames"/>
+		<exclude name="Generic.CodeAnalysis.UnusedFunctionParameter.Found"/>
+	</rule>
+
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="newspack-live"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals">
+		<properties>
+			<property name="prefixes" type="array">
+				<element value="newspack_live"/>
+				<element value="Newspack_Live"/>
+				<element value="NEWSPACK_LIVE"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="WordPress.WP.Capabilities">
+		<properties>
+			<property name="custom_capabilities" type="array">
+				<!-- Primitive capabilities. -->
+				<element value="newspack_live_manage"/>
+				<element value="newspack_live_post_entries"/>
+				<element value="newspack_live_publish_entries"/>
+				<element value="newspack_live_edit_others_entries"/>
+				<element value="newspack_live_moderate"/>
+				<!-- Meta capabilities. -->
+				<element value="newspack_live_manage_live"/>
+				<element value="newspack_live_post_to_live"/>
+				<element value="newspack_live_publish_to_live"/>
+				<element value="newspack_live_edit_entry"/>
+				<element value="newspack_live_moderate_live"/>
+			</property>
+		</properties>
+	</rule>
+
+	<rule ref="PHPCompatibilityWP"/>
+	<config name="testVersion" value="8.1-"/>
+	<config name="minimum_wp_version" value="6.7"/>
+
+	<file>.</file>
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/build/*</exclude-pattern>
+	<exclude-pattern>*/*.asset.php</exclude-pattern>
+	<exclude-pattern>*/release/*</exclude-pattern>
+	<exclude-pattern>*/tests/e2e/*</exclude-pattern>
+	<exclude-pattern>*/tests/mocks/*</exclude-pattern>
+	<exclude-pattern>*/tests/bootstrap.php</exclude-pattern>
+	<exclude-pattern>*/tests/wp-tests-config*.php</exclude-pattern>
+	<exclude-pattern>*/bin/*</exclude-pattern>
+
+	<!-- Template and render files run inside a function scope the sniff can't see. -->
+	<rule ref="WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound">
+		<exclude-pattern>*/templates/*</exclude-pattern>
+		<exclude-pattern>*/render.php</exclude-pattern>
+	</rule>
+</ruleset>

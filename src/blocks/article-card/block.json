@@ -1,0 +1,22 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "newspack-live/article-card",
+	"title": "Article card",
+	"category": "widgets",
+	"description": "A card linking to a published story, for live entries.",
+	"keywords": [ "read also", "story", "link" ],
+	"textdomain": "newspack-live",
+	"attributes": {
+		"postId": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"supports": {
+		"html": false
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}

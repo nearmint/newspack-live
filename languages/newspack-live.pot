@@ -1,0 +1,1476 @@
+# Copyright (C) 2026 Nicolas Rapp
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Newspack Live 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/newspack-live\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-13T07:10:11+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: newspack-live\n"
+
+#. Plugin Name of the plugin
+#: newspack-live.php
+msgid "Newspack Live"
+msgstr ""
+
+#. Description of the plugin
+#: newspack-live.php
+msgid "Live coverage of developing stories for Newspack sites."
+msgstr ""
+
+#. Author of the plugin
+#: newspack-live.php
+msgid "Nicolas Rapp"
+msgstr ""
+
+#: includes/class-admin.php:109
+#: includes/class-admin.php:110
+#: includes/class-admin.php:300
+#: includes/class-privacy.php:122
+#: build/app/console.js:14
+#: build/app/editor-panel.js:1
+msgid "Live"
+msgstr ""
+
+#: includes/class-admin.php:119
+#: includes/class-admin.php:253
+msgid "Lives"
+msgstr ""
+
+#: includes/class-admin.php:121
+#: includes/class-admin.php:259
+msgid "New live"
+msgstr ""
+
+#: includes/class-admin.php:311
+msgctxt "live state"
+msgid "Draft"
+msgstr ""
+
+#: includes/class-admin.php:312
+msgctxt "live state"
+msgid "Upcoming"
+msgstr ""
+
+#: includes/class-admin.php:313
+msgctxt "live state"
+msgid "Live"
+msgstr ""
+
+#: includes/class-admin.php:314
+msgctxt "live state"
+msgid "Ended"
+msgstr ""
+
+#: includes/class-admin.php:353
+msgid "Open console"
+msgstr ""
+
+#: includes/class-blocks.php:67
+msgid "Newspack Live assets are not built: run \"npm run build\" in the plugin folder."
+msgstr ""
+
+#: includes/class-console.php:41
+#: includes/class-entries.php:133
+#: includes/class-live.php:752
+#: includes/class-questions.php:144
+msgid "This post is not a live."
+msgstr ""
+
+#: includes/class-console.php:44
+#: includes/rest/class-entries-posts-controller.php:56
+msgid "Sorry, you are not allowed to post to this live."
+msgstr ""
+
+#: includes/class-console.php:56
+#: includes/class-console.php:57
+msgid "Live console"
+msgstr ""
+
+#. translators: %s: live title.
+#: includes/class-console.php:225
+#, php-format
+msgid "Live console: %s"
+msgstr ""
+
+#: includes/class-console.php:229
+msgid "Loading the live console…"
+msgstr ""
+
+#: includes/class-console.php:231
+msgid "The live console needs JavaScript."
+msgstr ""
+
+#: includes/class-context.php:266
+#: includes/class-renderer.php:1099
+msgid "Context"
+msgstr ""
+
+#: includes/class-dates.php:87
+msgctxt "short date format with year"
+msgid "M j, Y"
+msgstr ""
+
+#: includes/class-dates.php:88
+msgctxt "short date format"
+msgid "M j"
+msgstr ""
+
+#. translators: %s: time (e.g. "10:48 PM"). Mid-sentence, after "Updated".
+#: includes/class-dates.php:111
+#: includes/class-renderer.php:226
+#, php-format
+msgctxt "mid-sentence"
+msgid "yesterday, %s"
+msgstr ""
+
+#. translators: %s: time (e.g. "10:48 PM"). Start of the entry time label.
+#. translators: %s: time (e.g. "10:48 PM").
+#: includes/class-dates.php:113
+#: includes/class-renderer.php:224
+#, php-format
+msgid "Yesterday, %s"
+msgstr ""
+
+#. translators: 1: short date (e.g. "Sep 27" or "Sep 27, 2025"), 2: time.
+#: includes/class-dates.php:119
+#: includes/class-renderer.php:228
+#, php-format
+msgctxt "entry date and time"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: 1: date, 2: time.
+#: includes/class-dates.php:133
+#: includes/class-dates.php:234
+#, php-format
+msgctxt "date at time"
+msgid "%1$s at %2$s"
+msgstr ""
+
+#. translators: %s: time (e.g. "8:57 am"). Header line of a live updated today.
+#. translators: %s: time.
+#: includes/class-dates.php:163
+#: includes/class-renderer.php:230
+#: includes/class-renderer.php:931
+#, php-format
+msgid "Updated %s"
+msgstr ""
+
+#. translators: %s: time (e.g. "8:57 am").
+#: includes/class-dates.php:167
+#: includes/class-renderer.php:232
+#, php-format
+msgid "Updated yesterday at %s"
+msgstr ""
+
+#. translators: 1: short date (e.g. "Sep 27" or "Sep 27, 2025"), 2: time.
+#. translators: 1: date, 2: time.
+#: includes/class-dates.php:171
+#: includes/class-dates.php:219
+#: includes/class-renderer.php:234
+#, php-format
+msgid "Updated %1$s at %2$s"
+msgstr ""
+
+#: includes/class-entries.php:126
+#: includes/class-entries.php:432
+#: includes/class-entries.php:458
+#: includes/rest/class-rest-private.php:403
+msgid "Entry not found."
+msgstr ""
+
+#: includes/class-entries.php:270
+msgid "Invalid entry status."
+msgstr ""
+
+#: includes/class-entries.php:273
+msgid "Invalid entry type."
+msgstr ""
+
+#: includes/class-entries.php:276
+#: build/app/console.js:6
+msgid "Add a title or some content before publishing."
+msgstr ""
+
+#: includes/class-entries.php:279
+msgid "Invalid entry author."
+msgstr ""
+
+#: includes/class-entries.php:284
+msgid "Invalid entry time."
+msgstr ""
+
+#: includes/class-entries.php:287
+#: includes/rest/class-entries-posts-controller.php:103
+#: build/app/console.js:6
+msgid "The time can't be in the future."
+msgstr ""
+
+#: includes/class-entries.php:293
+msgid "Answer at most 50 questions at once."
+msgstr ""
+
+#: includes/class-entries.php:297
+#: includes/rest/class-rest-private.php:1079
+#: includes/rest/class-rest-private.php:1095
+msgid "A selected question does not belong to this live."
+msgstr ""
+
+#: includes/class-entries.php:324
+msgid "This label was just deleted. Pick another one."
+msgstr ""
+
+#: includes/class-entries.php:472
+msgid "The entry could not be moved to the trash."
+msgstr ""
+
+#: includes/class-labels.php:108
+msgid "Entry label: a preset slug or custom:<id>."
+msgstr ""
+
+#: includes/class-labels.php:122
+msgid "Custom entry labels of the live."
+msgstr ""
+
+#: includes/class-labels.php:141
+msgctxt "entry label"
+msgid "Breaking"
+msgstr ""
+
+#: includes/class-labels.php:146
+msgctxt "entry label"
+msgid "Photos"
+msgstr ""
+
+#: includes/class-labels.php:151
+msgctxt "entry label"
+msgid "Video"
+msgstr ""
+
+#: includes/class-labels.php:156
+msgctxt "entry label"
+msgid "Key point"
+msgstr ""
+
+#: includes/class-labels.php:161
+msgctxt "entry label"
+msgid "Your questions"
+msgstr ""
+
+#: includes/class-labels.php:372
+msgid "Answers to reader questions always carry the \"Your questions\" label."
+msgstr ""
+
+#: includes/class-labels.php:379
+msgid "Invalid label."
+msgstr ""
+
+#: includes/class-labels.php:460
+#: build/app/console.js:3
+msgid "Enter a label."
+msgstr ""
+
+#. translators: %d: maximum number of characters.
+#: includes/class-labels.php:466
+#: build/app/console.js:5
+#, php-format,js-format
+msgid "Use %d characters or fewer."
+msgstr ""
+
+#: includes/class-labels.php:471
+#: build/app/console.js:5
+msgid "This live already has this label."
+msgstr ""
+
+#. translators: %d: maximum number of custom labels.
+#: includes/class-labels.php:498
+#, php-format
+msgid "A live can have at most %d custom labels. Delete one you no longer use."
+msgstr ""
+
+#: includes/class-labels.php:528
+msgid "Label not found."
+msgstr ""
+
+#: includes/class-labels.php:531
+msgid "This label is used by an entry of this live (trashed entries included), so it can't be deleted."
+msgstr ""
+
+#: includes/class-listings.php:58
+msgctxt "listing badge"
+msgid "Live"
+msgstr ""
+
+#: includes/class-listings.php:60
+msgctxt "listing badge"
+msgid "Upcoming live"
+msgstr ""
+
+#: includes/class-listings.php:62
+msgctxt "listing badge"
+msgid "Live ended"
+msgstr ""
+
+#: includes/class-live.php:545
+msgid "The live is busy. Please try again."
+msgstr ""
+
+#: includes/class-live.php:749
+msgid "Unknown live action."
+msgstr ""
+
+#: includes/class-live.php:756
+#: build/app/console.js:14
+msgid "Publish the post to go live."
+msgstr ""
+
+#: includes/class-live.php:758
+msgid "This action is not available in the current state of the live."
+msgstr ""
+
+#: includes/class-plugin.php:92
+msgid "Newspack Live requires the Newspack plugin to be installed and active."
+msgstr ""
+
+#: includes/class-post-types.php:114
+msgid "Live entries"
+msgstr ""
+
+#: includes/class-post-types.php:115
+msgid "Live entry"
+msgstr ""
+
+#: includes/class-post-types.php:116
+msgid "Add live entry"
+msgstr ""
+
+#: includes/class-post-types.php:117
+msgid "Edit live entry"
+msgstr ""
+
+#: includes/class-post-types.php:118
+msgid "New live entry"
+msgstr ""
+
+#: includes/class-post-types.php:119
+msgid "View live entry"
+msgstr ""
+
+#: includes/class-post-types.php:120
+msgid "Search live entries"
+msgstr ""
+
+#: includes/class-post-types.php:121
+msgid "No live entries found."
+msgstr ""
+
+#: includes/class-post-types.php:172
+#: includes/class-privacy.php:44
+#: includes/class-privacy.php:62
+#: includes/class-privacy.php:118
+msgid "Live questions"
+msgstr ""
+
+#: includes/class-post-types.php:173
+msgid "Live question"
+msgstr ""
+
+#: includes/class-post-types.php:219
+msgctxt "question status"
+msgid "New"
+msgstr ""
+
+#: includes/class-post-types.php:220
+msgctxt "question status"
+msgid "Shortlisted"
+msgstr ""
+
+#: includes/class-post-types.php:221
+msgctxt "question status"
+msgid "Answered"
+msgstr ""
+
+#: includes/class-post-types.php:222
+msgctxt "question status"
+msgid "Rejected"
+msgstr ""
+
+#: includes/class-post-types.php:223
+msgctxt "question status"
+msgid "Spam"
+msgstr ""
+
+#: includes/class-privacy.php:48
+#: includes/class-privacy.php:66
+msgid "Live teams and activity"
+msgstr ""
+
+#: includes/class-privacy.php:126
+msgid "Question"
+msgstr ""
+
+#: includes/class-privacy.php:130
+msgid "Display name"
+msgstr ""
+
+#: includes/class-privacy.php:134
+msgid "Date"
+msgstr ""
+
+#: includes/class-privacy.php:177
+msgid "Answers written by the newsroom may still mention the reader by name in their own text; review them if needed."
+msgstr ""
+
+#: includes/class-privacy.php:268
+msgid "Live teams"
+msgstr ""
+
+#: includes/class-privacy.php:272
+msgid "Live team member"
+msgstr ""
+
+#: includes/class-question-submission.php:111
+#: includes/class-renderer.php:239
+#: includes/class-renderer.php:623
+msgid "Questions are closed."
+msgstr ""
+
+#: includes/class-question-submission.php:117
+msgid "Please sign in to ask a question."
+msgstr ""
+
+#: includes/class-question-submission.php:128
+msgid "Please take a moment before sending your question."
+msgstr ""
+
+#: includes/class-question-submission.php:137
+#: includes/class-questions.php:154
+#: includes/class-renderer.php:246
+msgid "Your question must be between 1 and 500 characters, and your name between 1 and 50."
+msgstr ""
+
+#: includes/class-question-submission.php:147
+#: includes/class-question-submission.php:177
+msgid "You just sent a question. Please wait a minute before sending another one."
+msgstr ""
+
+#: includes/class-questions.php:147
+#: includes/class-questions.php:210
+msgid "Invalid question status."
+msgstr ""
+
+#: includes/class-questions.php:207
+msgid "Question not found."
+msgstr ""
+
+#. translators: %d: number of new updates waiting, on the "new updates" button.
+#: includes/class-renderer.php:77
+#, php-format
+msgid "%d new update"
+msgid_plural "%d new updates"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of new updates waiting, announced to screen readers.
+#: includes/class-renderer.php:79
+#, php-format
+msgid "%d new update available"
+msgid_plural "%d new updates available"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-renderer.php:145
+msgid "Skip to latest updates"
+msgstr ""
+
+#: includes/class-renderer.php:216
+#: includes/class-renderer.php:757
+msgid "You've reached the start of this live."
+msgstr ""
+
+#. translators: %d: the cap (20). On the "new updates" button above it, e.g. "20+ new updates".
+#: includes/class-renderer.php:218
+#, php-format
+msgid "%d+ new updates"
+msgstr ""
+
+#. translators: %d: the cap (20). Announced to screen readers above it, e.g. "20+ new updates available".
+#: includes/class-renderer.php:220
+#, php-format
+msgid "%d+ new updates available"
+msgstr ""
+
+#: includes/class-renderer.php:221
+#: includes/class-renderer.php:755
+msgid "Load older updates"
+msgstr ""
+
+#: includes/class-renderer.php:222
+msgid "Connection lost. Retrying…"
+msgstr ""
+
+#: includes/class-renderer.php:235
+#: includes/class-renderer.php:460
+#: build/app/console.js:8
+msgid "Link copied"
+msgstr ""
+
+#: includes/class-renderer.php:236
+#: build/app/console.js:8
+msgid "The link could not be copied."
+msgstr ""
+
+#: includes/class-renderer.php:237
+#: includes/class-renderer.php:300
+msgctxt "live badge"
+msgid "Live"
+msgstr ""
+
+#: includes/class-renderer.php:238
+#: includes/class-renderer.php:304
+msgctxt "live badge"
+msgid "Ended"
+msgstr ""
+
+#. translators: 1: characters typed, 2: maximum.
+#: includes/class-renderer.php:241
+#: includes/class-renderer.php:643
+#, php-format
+msgid "%1$d/%2$d"
+msgstr ""
+
+#: includes/class-renderer.php:242
+msgid "Sending…"
+msgstr ""
+
+#: includes/class-renderer.php:243
+#: includes/class-renderer.php:667
+msgid "Send question"
+msgstr ""
+
+#: includes/class-renderer.php:244
+msgid "Thanks! Your question was sent to the newsroom. We can't answer every question — keep an eye on the live."
+msgstr ""
+
+#: includes/class-renderer.php:245
+#: build/app/console.js:5
+#: build/app/console.js:6
+#: build/app/console.js:8
+#: build/app/console.js:14
+msgid "Something went wrong. Please try again."
+msgstr ""
+
+#. translators: %s: start time.
+#: includes/class-renderer.php:317
+#, php-format
+msgid "Upcoming · Starts %s"
+msgstr ""
+
+#. translators: 1: comma-separated names, 2: last name.
+#: includes/class-renderer.php:397
+#: build/app/console.js:2
+#, php-format,js-format
+msgid "%1$s and %2$s"
+msgstr ""
+
+#. translators: 1: comma-separated names, 2: last name.
+#: includes/class-renderer.php:397
+msgctxt "list separator"
+msgid ", "
+msgstr ""
+
+#. translators: %s: host names.
+#: includes/class-renderer.php:417
+#, php-format
+msgid "Live hosted by %s"
+msgstr ""
+
+#. translators: %s: title of the update.
+#: includes/class-renderer.php:449
+#, php-format
+msgid "Share: %s"
+msgstr ""
+
+#: includes/class-renderer.php:453
+msgid "Share"
+msgstr ""
+
+#: includes/class-renderer.php:459
+#: build/app/console.js:8
+msgid "Copy link"
+msgstr ""
+
+#: includes/class-renderer.php:626
+#: build/app/editor-panel.js:1
+msgid "Ask the newsroom a question"
+msgstr ""
+
+#: includes/class-renderer.php:638
+msgid "Your question"
+msgstr ""
+
+#: includes/class-renderer.php:648
+msgid "Name to display"
+msgstr ""
+
+#: includes/class-renderer.php:652
+msgid "Website"
+msgstr ""
+
+#: includes/class-renderer.php:657
+msgid "Your display name will be published if we answer your question."
+msgstr ""
+
+#: includes/class-renderer.php:659
+msgid "Privacy policy"
+msgstr ""
+
+#: includes/class-renderer.php:665
+msgid "Sign in to ask a question"
+msgstr ""
+
+#: includes/class-renderer.php:724
+msgid "Live updates"
+msgstr ""
+
+#: includes/class-renderer.php:728
+msgid "Back to latest"
+msgstr ""
+
+#: includes/class-renderer.php:734
+msgid "New updates — back to latest"
+msgstr ""
+
+#. translators: 1: date, 2: time.
+#: includes/class-renderer.php:810
+#, php-format
+msgid "Coverage starts %1$s at %2$s. Check back then."
+msgstr ""
+
+#: includes/class-renderer.php:812
+msgid "First updates coming soon."
+msgstr ""
+
+#: includes/class-renderer.php:911
+#: build/app/console.js:8
+msgid "Pinned"
+msgstr ""
+
+#: includes/class-renderer.php:958
+msgctxt "separator between an entry time and its label"
+msgid ", "
+msgstr ""
+
+#. translators: %s: display name.
+#: includes/class-renderer.php:980
+#, php-format
+msgid "Question from %s:"
+msgstr ""
+
+#: includes/class-renderer.php:1009
+#: build/app/editor-panel.js:1
+msgid "Related coverage"
+msgstr ""
+
+#. translators: %d: minutes.
+#: includes/class-renderer.php:1044
+#, php-format
+msgid "%d min read"
+msgid_plural "%d min read"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-renderer.php:1145
+msgid "Read the story"
+msgstr ""
+
+#: includes/class-templates.php:90
+msgid "Single live"
+msgstr ""
+
+#: includes/class-templates.php:91
+msgid "Displays a post with live coverage enabled."
+msgstr ""
+
+#: includes/integrations/class-anti-spam.php:45
+msgid "We couldn't verify your request. Please try again."
+msgstr ""
+
+#. translators: %s: Collection title.
+#: includes/integrations/class-collections.php:78
+#, php-format
+msgid "%s (not published)"
+msgstr ""
+
+#. translators: %d: Collection ID.
+#: includes/integrations/class-collections.php:92
+#, php-format
+msgid "Collection #%d"
+msgstr ""
+
+#: includes/integrations/class-newspack-ads.php:42
+msgid "Live aside"
+msgstr ""
+
+#: includes/integrations/class-newspack-ads.php:43
+msgid "Ad in the live sidebar"
+msgstr ""
+
+#: includes/rest/class-entries-posts-controller.php:35
+msgid "Sorry, you are not allowed to access live entries."
+msgstr ""
+
+#: includes/rest/class-entries-posts-controller.php:50
+msgid "An entry cannot be moved to another live."
+msgstr ""
+
+#: includes/rest/class-entries-posts-controller.php:53
+msgid "An entry must belong to a live."
+msgstr ""
+
+#: includes/rest/class-entries-posts-controller.php:59
+#: includes/rest/class-rest-private.php:740
+#: includes/rest/class-rest-private.php:933
+msgid "Sorry, you are not allowed to publish to this live."
+msgstr ""
+
+#: includes/rest/class-entries-posts-controller.php:76
+msgid "The ID of the live the entry belongs to."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:398
+#: includes/rest/class-rest-private.php:425
+msgid "You must be signed in."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:409
+#: includes/rest/class-rest-public.php:168
+#: includes/rest/class-rest-public.php:171
+msgid "Live not found."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:413
+#: includes/rest/class-rest-private.php:427
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:744
+msgid "Sorry, you are not allowed to change the author."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:747
+msgid "The author must be on the live team."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:753
+#: includes/rest/class-rest-private.php:917
+msgid "Sorry, you are not allowed to pin entries on this live."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:756
+msgid "Sorry, you are not allowed to answer questions on this live."
+msgstr ""
+
+#: includes/rest/class-rest-private.php:914
+msgid "Nothing to change."
+msgstr ""
+
+#: includes/rest/class-rest-public.php:174
+msgid "This live is password protected."
+msgstr ""
+
+#. translators: 1: time, 2: number of hours.
+#: includes/rest/class-rest-public.php:260
+#, php-format
+msgid "This live will end automatically at %1$s because nothing has been posted for %2$d hour."
+msgid_plural "This live will end automatically at %1$s because nothing has been posted for %2$d hours."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/rest/class-rest-public.php:282
+msgid "This content is restricted."
+msgstr ""
+
+#: includes/rest/class-rest-public.php:301
+msgid "Invalid revision range."
+msgstr ""
+
+#: includes/rest/class-rest-public.php:501
+msgid "Auto-end warning (users who manage the live only)."
+msgstr ""
+
+#: includes/rest/class-rest-public.php:511
+msgid "Host names (users who manage the live only)."
+msgstr ""
+
+#: newspack-live.php:71
+msgid "Newspack Live is not built: run \"composer install\" in the plugin folder."
+msgstr ""
+
+#. translators: 1: names so far, 2: next name.
+#: build/app/console.js:3
+#, js-format
+msgid "%1$s, %2$s"
+msgstr ""
+
+#. translators: %s: reader names.
+#: build/app/console.js:3
+#, js-format
+msgid "Hi %s,"
+msgstr ""
+
+#: build/app/console.js:3
+msgid "Label"
+msgstr ""
+
+#: build/app/console.js:3
+msgid "Set automatically on answers to reader questions."
+msgstr ""
+
+#: build/app/console.js:3
+msgid "None"
+msgstr ""
+
+#: build/app/console.js:3
+msgid "Unknown label"
+msgstr ""
+
+#: build/app/console.js:3
+msgid "+ Create custom label…"
+msgstr ""
+
+#: build/app/console.js:5
+msgid "Label created and selected."
+msgstr ""
+
+#: build/app/console.js:5
+msgid "Label (optional)"
+msgstr ""
+
+#: build/app/console.js:5
+msgid "Label deleted."
+msgstr ""
+
+#: build/app/console.js:5
+msgid "Delete label"
+msgstr ""
+
+#: build/app/console.js:5
+msgid "Create a custom label"
+msgstr ""
+
+#: build/app/console.js:5
+msgid "New label"
+msgstr ""
+
+#. translators: %d: maximum number of characters.
+#: build/app/console.js:6
+#, js-format
+msgid "Up to %d characters. Available to every entry of this live."
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Add label"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Cancel"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Entry published."
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Entry submitted for review."
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Draft saved."
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Publish"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Submit for review"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Update"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Edit entry"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "New entry"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Restore unsaved draft"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Questions being answered"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Time"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Time: now"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Change time"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Title (optional)"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Entry body"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Author"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Pin to top"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Save draft"
+msgstr ""
+
+#: build/app/console.js:6
+msgid "Open in full editor"
+msgstr ""
+
+#. translators: %s: keyboard shortcut.
+#: build/app/console.js:7
+#, js-format
+msgid "Shortcut: %s"
+msgstr ""
+
+#. translators: %d: number of items loaded.
+#: build/app/console.js:8
+#, js-format
+msgid "%d more item loaded."
+msgid_plural "%d more items loaded."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/app/console.js:8
+msgid "Load more"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Not scheduled"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Pending review"
+msgstr ""
+
+#: build/app/console.js:8
+#: build/app/console.js:14
+#: build/app/editor-panel.js:1
+msgid "Draft"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Q&A"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "(empty)"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Edit"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Unpin"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Pin"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Unpublish"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Move to trash"
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Entry moved to the trash."
+msgstr ""
+
+#: build/app/console.js:8
+msgid "Entry unpublished."
+msgstr ""
+
+#. translators: %s: entry excerpt.
+#: build/app/console.js:9
+#, js-format
+msgid "Move \"%s\" to the trash?"
+msgstr ""
+
+#: build/app/console.js:9
+msgid "Unpublish this entry? It will disappear from the live."
+msgstr ""
+
+#: build/app/console.js:9
+msgid "On this live:"
+msgstr ""
+
+#. translators: %s: the current user's display name.
+#: build/app/console.js:10
+#, js-format
+msgid "%s (you)"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Only editors and authors on the team can moderate questions."
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Show"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "New"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Shortlisted"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Answered"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Rejected"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Spam"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "All"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Search questions"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Which questions to answer?"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Pick questions that are courteous, answerable now, not already answered, and about facts rather than opinions."
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Bulk actions"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Shortlist"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Reject"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Mark as spam"
+msgstr ""
+
+#: build/app/console.js:10
+msgid "Restore to New"
+msgstr ""
+
+#. translators: %d: number of questions.
+#: build/app/console.js:11
+#, js-format
+msgid "%d question updated."
+msgid_plural "%d questions updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/app/console.js:11
+msgid "The composer is ready to answer the selected questions."
+msgstr ""
+
+#: build/app/console.js:11
+msgid "Answer selected"
+msgstr ""
+
+#: build/app/console.js:11
+msgid "No questions here."
+msgstr ""
+
+#: build/app/console.js:11
+msgid "Questions"
+msgstr ""
+
+#. translators: %s: reader display name.
+#: build/app/console.js:12
+#, js-format
+msgid "Select the question from %s"
+msgstr ""
+
+#: build/app/console.js:12
+msgid "Registered"
+msgstr ""
+
+#. translators: %d: number of similar questions.
+#: build/app/console.js:13
+#, js-format
+msgid "%d similar question"
+msgid_plural "%d similar questions"
+msgstr[0] ""
+msgstr[1] ""
+
+#: build/app/console.js:13
+msgid "Question ungrouped."
+msgstr ""
+
+#. translators: %s: reader display name.
+#: build/app/console.js:14
+#, js-format
+msgid "Ungroup the question from %s"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Ungroup"
+msgstr ""
+
+#: build/app/console.js:14
+#: build/app/editor-panel.js:1
+msgid "Upcoming"
+msgstr ""
+
+#: build/app/console.js:14
+#: build/app/editor-panel.js:1
+msgid "Ended"
+msgstr ""
+
+#: build/app/console.js:14
+#: build/blocks/article-card/index.js:1
+msgid "(no title)"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Go live"
+msgstr ""
+
+#: build/app/console.js:14
+#: build/app/editor-panel.js:1
+msgid "Keep live"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "End live"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Reopen"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Questions open"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Questions closed"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "View live"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Edit settings"
+msgstr ""
+
+#: build/app/console.js:14
+msgid "This live has ended. Readers can still read it. Reopen it to post again."
+msgstr ""
+
+#: build/app/console.js:14
+msgid "End this live? Readers will see it as ended and questions will close."
+msgstr ""
+
+#: build/app/console.js:14
+msgid "Feed"
+msgstr ""
+
+#. translators: %d: number of drafts.
+#: build/app/console.js:15
+#, js-format
+msgid "Drafts (%d)"
+msgstr ""
+
+#. translators: %d: number of new questions.
+#: build/app/console.js:16
+#, js-format
+msgid "Questions (%d new)"
+msgstr ""
+
+#: build/app/console.js:16
+msgid "No drafts."
+msgstr ""
+
+#: build/app/console.js:16
+msgid "Drafts"
+msgstr ""
+
+#: build/app/console.js:16
+msgid "Nothing published yet."
+msgstr ""
+
+#: build/app/console.js:16
+msgid "Published entries"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Add a key fact…"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Context: key facts"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Click a bullet to format it: bold, italic, link."
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Key facts readers need to follow the live (what, when, where, who), one per bullet: press Enter to add a bullet. Shown in the Context card above the question form."
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Live team"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+#: build/blocks/live/index.js:1
+msgid "Live coverage"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Enable live coverage"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Open live console"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Start time"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Publish time"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Use the publish time"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Auto-end after inactivity"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "6 hours"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "12 hours"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "24 hours"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "48 hours"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Never"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Hosts (always included):"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Reader questions"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Off"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Anyone"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Registered readers only"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Question prompt"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Show entry author"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Hide all ads on this live"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Primary category"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Tag"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Choose stories"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Collection"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Related tag"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Related collection"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "The aside lists up to 4 of its stories."
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Turn on Newspack Collections to use a collection; the primary category is used meanwhile."
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Choose a collection"
+msgstr ""
+
+#: build/app/editor-panel.js:1
+msgid "Related stories (up to 4)"
+msgstr ""
+
+#: build/blocks/article-card/index.js:1
+msgid "Search stories"
+msgstr ""
+
+#: build/blocks/article-card/index.js:1
+msgid "No stories found."
+msgstr ""
+
+#: build/blocks/article-card/index.js:1
+msgid "Replace story"
+msgstr ""
+
+#: build/blocks/article-card/index.js:1
+msgid "Article card"
+msgstr ""
+
+#: build/blocks/article-card/index.js:1
+msgid "Choose a published story to link to."
+msgstr ""
+
+#: build/blocks/live/index.js:1
+msgid "The live header, context, questions and updates of the current post display here."
+msgstr ""
+
+#: build/app/blocks/article-card/block.json
+#: build/blocks/article-card/block.json
+msgctxt "block title"
+msgid "Article card"
+msgstr ""
+
+#: build/app/blocks/article-card/block.json
+#: build/blocks/article-card/block.json
+msgctxt "block description"
+msgid "A card linking to a published story, for live entries."
+msgstr ""
+
+#: build/app/blocks/article-card/block.json
+#: build/blocks/article-card/block.json
+msgctxt "block keyword"
+msgid "read also"
+msgstr ""
+
+#: build/app/blocks/article-card/block.json
+#: build/blocks/article-card/block.json
+msgctxt "block keyword"
+msgid "story"
+msgstr ""
+
+#: build/app/blocks/article-card/block.json
+#: build/blocks/article-card/block.json
+msgctxt "block keyword"
+msgid "link"
+msgstr ""
+
+#: build/app/blocks/live/block.json
+#: build/blocks/live/block.json
+msgctxt "block title"
+msgid "Live coverage"
+msgstr ""
+
+#: build/app/blocks/live/block.json
+#: build/blocks/live/block.json
+msgctxt "block description"
+msgid "Displays the live coverage of the current post: header, context, questions and updates."
+msgstr ""
+
+#: build/app/blocks/live/block.json
+#: build/blocks/live/block.json
+msgctxt "block keyword"
+msgid "live"
+msgstr ""
+
+#: build/app/blocks/live/block.json
+#: build/blocks/live/block.json
+msgctxt "block keyword"
+msgid "live blog"
+msgstr ""

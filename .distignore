@@ -1,0 +1,26 @@
+# Not shipped in the release zip.
+.*
+/node_modules
+/src
+/tests
+/bin
+/docs
+/release
+/artifacts
+AGENTS.md
+AGENTS.*.md
+CLAUDE.md
+CLAUDE.*.md
+composer.json
+composer.lock
+package.json
+package-lock.json
+phpcs.xml.dist
+phpunit.xml.dist
+webpack.config.js
+webpack.blocks.config.js
+tsconfig.json
+*.config.js
+*.config.ts
+playwright-report
+test-results

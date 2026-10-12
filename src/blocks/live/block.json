@@ -1,0 +1,21 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "newspack-live/live",
+	"title": "Live coverage",
+	"category": "widgets",
+	"description": "Displays the live coverage of the current post: header, context, questions and updates.",
+	"keywords": [ "live", "live blog" ],
+	"textdomain": "newspack-live",
+	"usesContext": [ "postId", "postType" ],
+	"supports": {
+		"html": false,
+		"inserter": false,
+		"interactivity": true,
+		"align": [ "wide", "full" ]
+	},
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css",
+	"viewScriptModule": "file:./view.js",
+	"render": "file:./render.php"
+}

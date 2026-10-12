@@ -1,0 +1,66 @@
+/**
+ * Article card.
+ */
+
+.newspack-live-card {
+	border: 1px solid var(--nl-border, #dcdcde);
+	display: flex;
+	flex-direction: column;
+	margin-block: 1em;
+
+	@media (min-width: 600px) {
+		flex-direction: row;
+	}
+}
+
+.newspack-live-card__media {
+	flex: 0 0 40%;
+
+	img {
+		display: block;
+		height: 100%;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+.newspack-live-card__body {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4em;
+	padding: 1em;
+
+	p {
+		margin: 0;
+	}
+}
+
+.newspack-live-card__category {
+	font-size: 0.75em;
+	font-weight: 700;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+}
+
+.newspack-live-card__title {
+	font-size: 1.1em;
+	margin: 0;
+}
+
+.newspack-live-card__authors,
+.newspack-live-card__read-time {
+	color: var(--nl-muted, #5f6368);
+	font-size: 0.875em;
+}
+
+.newspack-live-card__footer {
+	align-items: center;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1em;
+	justify-content: space-between;
+}
+
+.newspack-live-card__cta {
+	font-weight: 700;
+}
